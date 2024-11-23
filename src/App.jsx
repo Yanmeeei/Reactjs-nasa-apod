@@ -7,7 +7,7 @@ function App() {
     const NASA_KEY = import.meta.env.VITE_NASA_API_KEY
     const [showModel, setShowModel] = useState(false) // declare state., setter, and default value
     const [data, setData] = useState(null)
-    const [loading, setLoading] = useState(false)
+    // const [loading, setLoading] = useState(false)
     function handleToggleModel() {
         setShowModel(!showModel)
     }
