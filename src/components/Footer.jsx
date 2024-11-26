@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function Footer(props) {
     const {data, handleToggleModel} = props
     const link = <a href={"https://apod.nasa.gov/apod/archivepixFull.html"}>APOD Project</a>
@@ -15,4 +17,11 @@ export default function Footer(props) {
             </button>
         </footer>
     )
+}
+
+Footer.propTypes = {
+    data: PropTypes.shape({
+        title: PropTypes.string,
+    }),
+    handleToggleModel: PropTypes.func
 }

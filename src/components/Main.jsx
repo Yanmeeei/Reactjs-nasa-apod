@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function Main(props) {
     const {data} = props
     return (
@@ -22,4 +24,13 @@ export default function Main(props) {
         </div>
 
     )
+}
+
+Main.propTypes = {
+    data: PropTypes.shape({
+        media_type: PropTypes.string.isRequired,
+        hdurl: PropTypes.string,
+        url: PropTypes.string,
+        title: PropTypes.string,
+    }),
 }

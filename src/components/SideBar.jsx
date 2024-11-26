@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function SideBar(props) {
     const {data, handleToggleModel} = props
     return (
@@ -15,4 +17,13 @@ export default function SideBar(props) {
             </div>
         </div>
     )
+}
+
+SideBar.propTypes = {
+    data: PropTypes.shape({
+        date: PropTypes.string,
+        explanation: PropTypes.string,
+        title: PropTypes.string,
+    }),
+    handleToggleModel: PropTypes.func
 }
